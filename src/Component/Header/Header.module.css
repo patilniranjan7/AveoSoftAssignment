@@ -1,0 +1,10 @@
+.body{
+        height: 100px;
+        width:100%;
+        border-bottom: 1px solid rgb(216, 215, 215);
+       text-align: center;
+        background-color: rgb(243, 243, 243);
+}
+.name{
+        padding-top:25px;
+}
