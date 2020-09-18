@@ -3,7 +3,6 @@ import {useState, useEffect} from 'react'
 import css from "./ProductCategory.module.css"
 import { Dropdown,FormControl } from "react-bootstrap";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import ProductDescription from "../../Component/ProductDescription/ProductDescription"
 // Purl  https://aveosoft-react-assignment.herokuapp.com/products
 //Curl   https://aveosoft-react-assignment.herokuapp.com/categories
@@ -84,7 +83,7 @@ export default function ProductCategory(){
        let Id = categoriesdata[i].id;
        let Name = categoriesdata[i].name;
        List.push(
-        <Dropdown.Item onSelect={(e) => {  setId(Id);setname(Name);}} eventKey={Id}><Link to={`/`}>{Name}</Link></Dropdown.Item>
+        <Dropdown.Item onSelect={(e) => {  setId(Id);setname(Name);}} eventKey={Id}>{Name}</Dropdown.Item>
 
        );
      }

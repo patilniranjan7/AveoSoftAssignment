@@ -1,5 +1,7 @@
 .card{
     margin-top:10%;
+   
+   flex-wrap: wrap !important;
 }
 .cardBody{
     text-decoration: none !important;

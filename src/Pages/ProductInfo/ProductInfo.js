@@ -6,6 +6,7 @@ import css from "./ProductInfo.module.css"
 import CardColumns from 'react-bootstrap/CardColumns'
 export default function ProductInfo(props) {
     const [products, setProduct] = useState({});
+    let Img ="Laptops";
       const Id = props.match.params.id;
       var List = [];
     useEffect(() => {
@@ -18,10 +19,12 @@ export default function ProductInfo(props) {
       }, []);
     function productdata(){
         //console.log(products);
-                 
-          let url =`https://source.unsplash.com/286x180/?${products.name}`;
+                 if(products.categoryId === 1){
+                      Img ="mobile";
+                 }
+          let url =`https://source.unsplash.com/286x180/?${Img},${products.name}`;
            List.push(<CardColumns>
-                                <Card.Img variant="top" src={url} />
+                                <Card.Img variant="top" src={url} alt="DEMO_IMG" />
                             <Card  >
                                     
                                     <Card.Body className={css.card}>
