@@ -1,0 +1,8 @@
+.card{
+    margin-top:10%;
+}
+.cardBody{
+    text-decoration: none !important;
+    color: black;
+    text-align: center;
+}

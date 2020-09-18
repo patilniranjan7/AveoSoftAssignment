@@ -21,9 +21,10 @@ export default function ProductInfo(props) {
                  
           let url =`https://source.unsplash.com/286x180/?${products.name}`;
            List.push(<CardColumns>
+                                <Card.Img variant="top" src={url} />
                             <Card  >
-                                    <Card.Img variant="top" src={url} />
-                                    <Card.Body>
+                                    
+                                    <Card.Body className={css.card}>
                                           <Card.Title>&nbsp;{products.name}</Card.Title>
                                           <Card.Title>Model:{products.model}</Card.Title>
                                           <Card.Title>Price:{products.price}</Card.Title>

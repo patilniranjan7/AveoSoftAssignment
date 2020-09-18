@@ -39,10 +39,10 @@ export default function ProductDescription(props){
                           let url=`https://source.unsplash.com/286x180/?${props.name},${products[i].name}`;
                           List.push(<div>
                                      <Link to={`/${products[i].id}`} style={{ textDecoration: 'none' }}>
-                                    <Card key={i} >
+                                    <Card key={i} className={css.card}>
 
                                     <Card.Img  className={css.img} variant="top" src={url} />
-                                    <Card.Body>
+                                    <Card.Body className={css.cardBody}>
                                           <Card.Title>&nbsp;{products[i].name}</Card.Title>
                                           <Card.Title>Model:&nbsp;{products[i].model}</Card.Title>
                                           <Card.Title>Price:&nbsp;{products[i].price}</Card.Title>
@@ -62,9 +62,9 @@ export default function ProductDescription(props){
 
         
         
-       return(<div>
+       return(<div style={{padding:'0% 10%'}}>
          {
-            {hide}?(<div className={css.card}>
+            {hide}?(<div >
              
                   <CardColumns> {product()} </CardColumns>
                     
